@@ -1,0 +1,51 @@
+/*
+*	NO NEED TO EDIT THIS FILE
+*	---------------------------------
+*	If you have set the module to use CSS edit the other file not this one.
+*	This file contains all CSS needed for the module to work with control panel styling options.
+*/
+
+
+.fbicon{
+	display:block;
+	height:70px;
+	width:70px;
+	margin-top:-42px;
+	position:absolute;
+	background-repeat:no-repeat;
+	overflow:hidden;
+	cursor: pointer;
+}
+
+#fbslide {
+	display:block;
+	position:fixed;
+}
+
+#fb-credit {
+	font-size: 11px;
+	text-align: center;
+}
+
+.fbimg2 {
+	visibility: hidden;
+}
+
+.mobile-link_fb {
+	visibility: hidden;
+	height: 0px;
+}
+
+@media (max-width: 320px) {
+	#fbslide {
+		visibility: hidden;
+	}
+	.mobile-link_fb {
+		visibility: visible;
+		position: fixed;
+		top: 10px;
+		right: 2px;
+		height: 50px;
+		width: 50px;
+	}
+}

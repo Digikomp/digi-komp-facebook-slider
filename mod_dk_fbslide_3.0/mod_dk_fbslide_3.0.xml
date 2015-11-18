@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<extension	type="module"	version="3.0"	client="site"	method="upgrade">
+	<name>Digi-Komp Facebook Slider</name>
+	<author>Chris Chaffey</author>
+	<authorEmail>chris.chaffey@digi-komp.com</authorEmail>
+	<version>1.3.0</version>
+	<license>GPL 2.0</license>
+	<creationDate>12-5-2014</creationDate>
+	<description>Thank you for trying our Digi-Komp Facebook Slider. This version is Joomla 3.0 compatible. &lt;br /&gt; &lt;br /&gt; If you like our module consider liking and following us on social media to keep up with developments.</description>
+
+	<files>
+		<filename>mod_dk_fbslide_3.0.xml</filename>
+		<filename module="mod_dk_fbslide_3.0">mod_dk_fbslide_3.0.php</filename>
+        <filename>index.html</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+        <filename>tmpl/index.html</filename>
+		<folder>images</folder>
+		<folder>css</folder>
+    </files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="@spacer1" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; CUSTOM SETTINGS &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field class="btn-group btn-group-yesno" name="loadCss" type="radio" default="0" label="Use CSS File" description="**Note if your unfamiliar with how css works leave this setting set as no** &lt;br /&gt; &lt;br /&gt; If you wish to remove inline css from this module for improved SEO scores. &lt;br /&gt; Set the value to yes and edit the css file provided with this module. &lt;br /&gt; &lt;br /&gt; **If you are not going to change the style or position settings you can &lt;br /&gt; use css to gain better seo scores without worrying about editing css files**">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="loadjQuery" type="radio" default="0" label="Load jQuery" description="**Note jQuery is required by this module.** &lt;br /&gt; The only reason not to load it is if it has already been loaded by another module.">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="fbspeed" type="radio" default="medium" label="Slide Speed" description="Enter slow, medium or fast.">
+					<option value="slow">Slow</option>
+					<option value="medium">Medium</option>
+					<option value="fast">Fast</option>
+				</field>
+				<field name="fbimg" type="list" default="/modules/mod_dk_fbslide_3.0/images/facebook8.png" label="Change Facebook Icon" description="Select the icon you would like to use.">
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook.png">Icon 1</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook2.png">Icon 2</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook3.png">Icon 3</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook4.png">Icon 4</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook5.png">Icon 5</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook6.png">Icon 6</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook7.png">Icon 7</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook8.png">Icon 8</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook9.png">Icon 9</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook10.png">Icon 10</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook11.png">Icon 11</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook12.png">Icon 12</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook13.png">Icon 13</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook14.png">Icon 14</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/facebook15.png">Icon 15</option>
+				</field>
+				<field name="fbimg2" type="list" default="/modules/mod_dk_fbslide_3.0/images/cancel.png" label="Change Close Icon" description="Select the icon you would like to use.">
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel.png">Icon 1</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel2.png">Icon 2</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel3.png">Icon 3</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel4.png">Icon 4</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel5.png">Icon 5</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel6.png">Icon 6</option>
+					<option value="/modules/mod_dk_fbslide_3.0/images/cancel7.png">Icon 7</option>
+				</field>
+			</fieldset>
+			
+			
+			
+			<fieldset name="page_plugin_set" label="Page Plugin Settings">
+				<field name="@spacer2" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; FACEBOOK PAGE PLUGIN SETTINGS &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field name="fb_page_url" type="text" default="https://www.facebook.com/digikomp" label="Facebook Page URL" description="Enter your Facebook page URL. Including https://" />
+				<field class="btn-group btn-group-yesno" name="fb_page_faces" type="radio" default="true" label="Show Faces" description="Show or hide faces &lt;br /&gt; &lt;br /&gt; **Note adjust height until it suits.**">
+					<option value="false">JHIDE</option>
+					<option value="true">JSHOW</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="fb_page_stream" type="radio" default="true" label="Show Stream" description="Show or hide page feed. &lt;br /&gt; &lt;br /&gt; **Note adjust height until it suits.**">
+					<option value="false">JHIDE</option>
+					<option value="true">JSHOW</option>
+				</field>
+				<field class="btn-group btn-group-yesno" name="fb_page_header" type="radio" default="false" label="Show Cover Photo" description="Show or hide cover photo. &lt;br /&gt; &lt;br /&gt; **Note adjust height until it suits.**">
+					<option value="true">JHIDE</option>
+					<option value="false">JSHOW</option>
+				</field>
+				<field name="fb_page_link" type="text" default="Digi-Komp" label="Enter Link Text" description="Link text." />
+				<field name="@spacer3" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; PLUGIN WIDTH/HEIGHT SETTINGS &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field name="fb_page_width" type="text" default="296" label="Width" description="Enter the width of the plugin. &lt;br /&gt; &lt;br /&gt; **Note should be smaller than module width. Min width is 280 and max width is 500**" />
+				<field name="fb_page_height" type="text" default="330" label="Height" description="Enter the height of the plugin. &lt;br /&gt; &lt;br /&gt; **Note should be smaller than module height. Minimum height is 130.**" />
+			</fieldset>
+			
+			
+			
+			<fieldset name="styles" label="Style and Position Settings">
+				<field name="@spacer4" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; IF YOUR NOT USING CSS FILE ADJUST SETTINGS BELOW &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field name="@spacer5" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; MODULE POSITION SETTINGS &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field class="btn-group btn-group-yesno" name="fbpos" type="radio" default="right" label="Module Position" description="Enter the side of the screen you want the slider on. &lt;br /&gt; &lt;br /&gt; **Important. Icon must be opposite to module position. i.e. Module right with icon left.** &lt;br /&gt; &lt;br /&gt; **If your using css change properties accordingly in the css file aswell as in here.**" >
+					<option value="right">Right</option>
+					<option value="left">Left</option>
+				</field>
+				<field name="fbdist" type="text" default="302" label="Distance" description="Enter how far from the right or left of the screen you would like the module to sit. &lt;br /&gt; &lt;br /&gt; **Default is 302.** &lt;br /&gt; &lt;br /&gt; **Note exclude px from value, you can use this setting with css set to yes.**" />
+				<field name="fbtop" type="text" default="20" label="Top Position" description="Enter how far from the top of the screen you would like the module to sit. &lt;br /&gt; &lt;br /&gt; **Note default is 20.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="@spacer6" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; MODULE STYLE SETTINGS &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field name="fbwidth" type="text" default="296" label="Width" description="Enter the width of the module. &lt;br /&gt; &lt;br /&gt; **Note if you change the width and add 50 then add 50 to the distance setting also. Default is 296.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbheight" type="text" default="330" label="Height" description="Enter the height of the module. &lt;br /&gt; &lt;br /&gt; **Note height will vary depending of layout options used. Default is 330.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbpadding_top" type="text" default="2" label="Padding Top" description="Padding for the top of the module. &lt;br /&gt; &lt;br /&gt; **Note default is 2.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbpadding_right" type="text" default="2" label="Padding Right" description="Padding for the right of the module. &lt;br /&gt; &lt;br /&gt; **Note if you add 1 to padding right then add 1 to the distance settings. Default is 2** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbpadding_bottom" type="text" default="2" label="Padding Bottom" description="Padding for the bottom of the module. &lt;br /&gt; &lt;br /&gt; **Note default is 2** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbpadding_left" type="text" default="2" label="Padding Left" description="Padding for the left of the module. &lt;br /&gt; &lt;br /&gt; **Note if you add 1 to padding left then add 1 to the distance settings. Default is 2** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbborder_width" type="text" default="1" label="Border Width" description="Enter the border width. &lt;br /&gt; &lt;br /&gt; **Note if you add 1 to border width then add 2 to the module distance setting and 1 to the facebook icon distance setting.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbborder_radius" type="text" default="5" label="Border Radius" description="Enter the radius for the borders. &lt;br /&gt; &lt;br /&gt; **Note padding will need to be added for border radius greater than 8. &lt;br /&gt; Default is 5.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbborder_style" type="list" default="solid" label="Border Style" description="Enter the style of the border. &lt;br /&gt; &lt;br /&gt; **Note choices are any valid border style attribute which include &lt;br /&gt; inset, outset, groove, ridge, dashed, dotted, double and default option solid.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**">
+					<option value="solid">solid</option>
+					<option value="dotted">dotted</option>
+					<option value="dashed">dashed</option>
+					<option value="double">double</option>
+					<option value="groove">groove</option>
+					<option value="ridge">ridge</option>
+					<option value="inset">inset</option>
+					<option value="outset">outset</option>
+				</field>
+				<field name="fbborder_color" type="text" default="467DDB" label="Border Colour" description="Enter the border colour. &lt;br /&gt; &lt;br /&gt; **Note it's a hex value but leave out the # . Default is 467DDB.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbbackground_color" type="text" default="fff" label="Background Colour" description="Enter the background colour. &lt;br /&gt; &lt;br /&gt; **Note it's a hex value but leave out the # . Default is fff.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbzindex" type="text" default="9999" label="Z-index" description="This adjust how elements overlap. By default our Facebook slider overlaps our other sliders so when it slides out it sits on top of the other 2 icons. &lt;br /&gt; &lt;br /&gt; If your changing the top positioning of our modules you will want to adjust this accordingly to avoid icons sitting over the sliders. &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fb_shadow_hor" type="text" default="0" label="Horizontal Box Shadow" description="This sets the amount of horizontal shadow. Negative values are allowed. &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fb_shadow_ver" type="text" default="0" label="Vertical Box Shadow" description="This sets the amount of vertical shadow. Negative values are allowed. &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fb_shadow_blur" type="text" default="0" label="Box Shadow Blur" description="This sets the amount of blur on the box shadow. &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fb_shadow_spread" type="text" default="0" label="Box Shadow Spread" description="This sets the amount of spread the for the box shadow. &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fb_shadow_color" type="text" default="ccc" label="Box Shadow Colour" description="This sets the colour for the box shadow. &lt;br /&gt; &lt;br /&gt; **Note it's a hex value but leave out the # . Default is ccc.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="@spacer7" type="spacer" default="" label="------------------------------------------------------------------------------------------------ &lt;br /&gt; FACEBOOK ICON POSITION SETTINGS &lt;br /&gt; ------------------------------------------------------------------------------------------------" description="" />
+				<field class="btn-group btn-group-yesno" name="fbicopos" type="radio" default="left" label="Icon Position" description="Important. Icon must be opposite to module position. i.e. Module right with icon left. &lt;br /&gt; &lt;br /&gt; **If your using css change properties accordingly in the css file aswell as in here.**" >
+					<option value="left">Left</option>
+					<option value="right">Right</option>
+				</field>
+				<field name="fbicon_top" type="text" default="40" label="Facebook Icon Top Position" description="Enter how far from the top of the screen you would like the icon to sit. &lt;br /&gt; &lt;br /&gt; **Note this adjusts the Facebook icon position from top of module, not page. &lt;br /&gt; It's 40 as default with a height of 330.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+				<field name="fbicon_dist" type="text" default="63" label="Facebook Icon Distance" description="Enter how far from the left or right of the screen you would like the icon to sit. &lt;br /&gt; &lt;br /&gt; **Note increasing the value moves it to the left. &lt;br /&gt; It's 63 as default with a width of 296 and distance of 302.** &lt;br /&gt; &lt;br /&gt; **Not applicable if using CSS file.**" />
+			</fieldset>
+			
+			
+			
+			<fieldset name="advanced">
+				<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="Module class suffix for alternate styling. **Can be blank with no value.**" />
+				<field class="btn-group btn-group-yesno" name="give-credit" type="radio" default="0" label="Insert Developer Link" description="If you would like to include a link back to the developer set this option to show. &lt;br /&gt; &lt;br /&gt; **Note it comes with the nofollow attribute.**">
+					<option value="0">JHIDE</option>
+					<option value="1">JSHOW</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>
