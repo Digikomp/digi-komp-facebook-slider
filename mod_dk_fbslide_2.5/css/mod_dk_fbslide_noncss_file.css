@@ -8,10 +8,10 @@
 
 .fbicon{
 	display:block;
-	height:70px;
+	width:64px;
+	height:64px;
 	margin-top:-42px;
 	position:absolute;
-	width:70px;
 	background-repeat:no-repeat;
 	overflow:hidden;
 	cursor: pointer;
