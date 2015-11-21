@@ -7,12 +7,12 @@
 
 .fbicon{
 	display:block;
-	height:70px;
+	width:64px;
+	height:64px;
 	top:40px;
 	margin-top:-42px;
 	position:absolute;
 	left:-62px;
-	width:70px;
 	background-repeat:no-repeat;
 	overflow:hidden;
 	cursor: pointer;
